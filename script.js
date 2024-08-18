@@ -57,7 +57,6 @@ const guessInput = document.getElementById('guess-input');
 const submitButton = document.getElementById('submit-guess');
 const message = document.getElementById('message');
 
-// Create the grid dynamically
 function createGrid() {
     for (let i = 0; i < maxAttempts * 5; i++) {
         const div = document.createElement('div');
@@ -66,7 +65,6 @@ function createGrid() {
     }
 }
 
-// Handle the guess submission
 submitButton.addEventListener('click', handleGuess);
 
 function handleGuess() {
@@ -117,7 +115,6 @@ function checkGuess(row, guess) {
     }
 }
 
-// Capture input and update current guess
 guessInput.addEventListener('input', (e) => {
     currentGuess = e.target.value.toLowerCase();
     if (currentGuess.length > 5) {
@@ -126,5 +123,4 @@ guessInput.addEventListener('input', (e) => {
     }
 });
 
-// Initialize the game
 createGrid();
